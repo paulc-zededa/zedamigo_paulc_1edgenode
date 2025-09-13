@@ -13,7 +13,7 @@ resource "zedcloud_network" "edge_node_as_dhcp_client" {
   ip {
     dhcp = "NETWORK_DHCP_TYPE_CLIENT"
   }
-  mtu = 1500
+  mtu         = 1500
 }
 
 resource "zedcloud_edgenode" "ENODE_TEST_AAAA" {
