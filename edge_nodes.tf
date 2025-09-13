@@ -5,11 +5,10 @@ variable "onboarding_key" {
 }
 
 resource "zedcloud_network" "edge_node_as_dhcp_client" {
-  name  = "edge_node_as_dhcp_client_${var.config_suffix}"
-  title = "edge_node_as_dhcp_client"
-  kind  = "NETWORK_KIND_V4"
-
-  project_id = var.PROJECT_NAME
+  name        = "edge_node_as_dhcp_client_${var.config_suffix}"
+  title       = "edge_node_as_dhcp_client"
+  kind        = "NETWORK_KIND_V4"
+  project_id  = var.PROJECT_NAME
 
   ip {
     dhcp = "NETWORK_DHCP_TYPE_CLIENT"
