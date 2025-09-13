@@ -21,6 +21,7 @@ variable "ZEDEDA_CLOUD_URL" {
   description = "ZEDEDA CLOUD URL"
   sensitive   = false
   type        = string
+  default     = "zedcloud.gmwtus.zededa.net"
 }
 
 variable "ZEDEDA_CLOUD_TOKEN" {
