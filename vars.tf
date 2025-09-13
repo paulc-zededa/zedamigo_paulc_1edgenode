@@ -48,5 +48,5 @@ variable "DOCKERHUB_IMAGE_LATEST_TAG" {
 variable "PROJECT_NAME" {
   sensitive = false
   type      = string
-  default   = "mg-demo"
+  default   = "paulc-demo"
 }
