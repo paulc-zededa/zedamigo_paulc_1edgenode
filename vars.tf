@@ -19,7 +19,7 @@ variable "edge_node_ssh_pub_key" {
 # ensure that.
 variable "config_suffix" {
   type    = string
-  default = "16661"
+  default = "16662"
 }
 
 # Defined as a variable in the Github repo.
