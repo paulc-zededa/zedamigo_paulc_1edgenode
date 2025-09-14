@@ -8,7 +8,7 @@ resource "zedcloud_network" "edge_node_as_dhcp_client" {
   name        = "edge_node_as_dhcp_client_${var.config_suffix}"
   title       = "edge_node_as_dhcp_client"
   kind        = "NETWORK_KIND_V4"
-  project_id  = var.PROJECT_NAME
+  project_id  = zedcloud_project.PROJECT.id
 
   ip {
     dhcp = "NETWORK_DHCP_TYPE_CLIENT"
@@ -22,7 +22,7 @@ resource "zedcloud_edgenode" "ENODE_TEST_AAAA" {
   serialno       = "SN_TEST_AAAA_${var.config_suffix}"
   onboarding_key = var.onboarding_key
   model_id       = zedcloud_model.QEMU_VM.id
-  project_id     = var.PROJECT_NAME
+  project_id     = zedcloud_project.PROJECT.id
   admin_state    = "ADMIN_STATE_ACTIVE"
 
   config_item {
@@ -50,7 +50,7 @@ resource "zedcloud_edgenode" "ENODE_TEST_BBBB" {
   serialno       = "SN_TEST_BBBB_${var.config_suffix}"
   onboarding_key = var.onboarding_key
   model_id       = zedcloud_model.QEMU_VM.id
-  project_id     = var.PROJECT_NAME
+  project_id     = zedcloud_project.PROJECT.id
   admin_state    = "ADMIN_STATE_ACTIVE"
 
   config_item {
